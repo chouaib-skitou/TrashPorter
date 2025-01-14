@@ -92,6 +92,7 @@ Sculptura is a virtual reality project focused on the art of sculpture. The user
 - **Camara Hamoudia**
 - **Skitou Chouaib** (GitHub Integrator)
 - **Vengadabady Lokeshwaran**
+- **Rhourri Yassine**
 
 ---
 
