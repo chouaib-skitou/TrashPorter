@@ -103,4 +103,8 @@ Sculptura is a virtual reality project focused on the art of sculpture. The user
 
 ---
 
+## 🔧 Development Environment
+- **Unity Version:** 2020.3.34
+- **Unity Plugin Version:** 3.10.0
+
 ### Let's sculpt the future together! 🚀
