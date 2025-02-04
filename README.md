@@ -1,111 +1,101 @@
-# Sculptura: Assemble, Create, Master 🎨✨
-
+# TrashPorter: Make the Planet Shine, One Trash at a Time 🌍♻️
 
 ## 🎯 Project Overview
-Sculptura is a virtual reality project focused on the art of sculpture. The user interacts with a VR environment to recreate sculptures using small cubes or other forms, encouraging creativity and spatial awareness.
+**TrashPorter** is an immersive virtual reality experience designed to raise awareness about recycling and waste management. Players explore a vibrant forest, collecting and sorting trash into appropriate bins while learning about sustainability in an engaging and interactive way.
 
 ---
 
 ## 🌟 Key Features
 
-- **Locomotion Techniques:**
-  - Teleportation 🚀
-  - Trackpad 🎛️
+### **Locomotion Techniques**
+- **Teleportation** 🚀: Move seamlessly through the virtual environment by teleporting.
 
-- **Immersive Graphics:**
-  - Cohesive visual assets 🖼️
-  - Rotatable sculptures for full 3D view 🔄
+### **Interaction Mechanics**
+- **Pick up trash** 🖐️: Grab and place waste in the correct bin.
+- **Throw trash** 🏹: Toss distant waste into bins.
+- **Cut waste** ✂️: Break down certain types of waste.
+- **Push objects** 📦: Move large items to designated areas.
 
-- **Interactive Mechanics:**
-  - Magnetic or gravity-based brick assembly 🧲
-  - "Exit" options via menu or interactive door 🚪
+### **Immersive Environment**
+- **Vibrant forest setting** 🌲🦊: A dynamic ecosystem populated with wildlife.
+- **Ambient sounds** 🎵: Background sound effects enhance realism.
+- **Visual effects** ✨: Highlighted objects provide interaction feedback.
+- **Haptic feedback** 🤲: Feel the action with controller vibrations.
 
-- **Piece Spawning Options:**
-  - Clickable menu for spawning pieces 📋
-  - Hidden pieces to encourage exploration 🕵️‍♂️
-  - Final piece strategically placed for user engagement 🌟
+### **Game Progression**
+- **Level 1: Waste Sorting**
+  - Players sort trash into four recycling bins:
+    - Glass 🟢
+    - Paper 📄
+    - Plastic 🥤
+    - Food waste 🍎
+  - **Scoring System**:
+    - ✅ +1 point for correct sorting
+    - ❌ -1 point for incorrect sorting
+  - **Level Completion**: Reach a 70% accuracy rate to progress.
 
-- **Feedback and Sound Effects:**
-  - Haptic feedback ✋
-  - Catch/release sounds 🎵
-  - Visual effects for interactive objects ✨
-  - Background music 🎶
+- **Level 2: Bin Management**
+  - Manage the capacity of recycling bins.
+  - Full bins must be moved to a disposal zone.
+  - **Scoring System**:
+    - ✅ +1 point for correct sorting
+    - ❌ -1 point for incorrect sorting or throwing waste into full bins
 
----
-
-## 🛠️ Technical Features
-
-### Menu Design
-- **Display Options:**
-  - Button-triggered floating menu ⚙️
-  - In-room interactive menu (plane-style, TP3 reference) 🗂️
-
-### Sculpture Validation
-- Completed sculpture displayed alongside assembly pieces 🏗️
-- Assembly zone with validation (e.g., square on the floor) ✅
-- Hollow template to guide piece placement 🧩
+### **User Interface & Feedback**
+- **Floating Menu** 🎛️: Toggle menu visibility by pressing a button.
+- **Sound Effects** 🔊:
+  - When picking up waste.
+  - When disposing of waste in the bin.
+  - Background environmental sounds.
+- **Visual Cues** 👀:
+  - Highlight effect on targetable objects.
+  - Color changes for interactable elements.
+- **Haptic Feedback** ✋:
+  - Vibrations upon successful disposal.
 
 ---
 
 ## 🖼️ Assets
 
-### Environment
-- **Room Setup:**
-  - Brick walls: [Bricks 097](https://ambientcg.com) 🧱
-  - Black brick walls: [Bricks 058](https://ambientcg.com) 🖤
-  - Stone walls: [Bricks 089](https://ambientcg.com) 🪨
-  - White walls: [Wallpaper 001 A](https://ambientcg.com) ⚪
-  - Floor: [Wood Floor 052](https://ambientcg.com) 🪵
+### **Environment**
+- **Forest Landscape** 🌳
+- **Trash bins** 🗑️:
+  - **Basic Bin**: [Sketchfab](https://sketchfab.com)
+  - **Trash Container**
+  - **Trash Monster**: [Humanoise - Sketchfab](https://sketchfab.com)
 
-### Sculptures
-- Rubik's Cube: [Cube by EuropeX](https://sketchfab.com) 🧊
-- Painting Puzzle: [Painting 001](https://ambientcg.com) 🎨
-- Candy Sculptures: [Candy Assets](https://ambientcg.com) 🍭
+### **Trash Items**
+- **General Trash** 🗑️
+- **Cigarettes** 🚬
+- **Beer Can** 🍺: [Maryrosa - Sketchfab](https://sketchfab.com)
 
-### Characters
-- Background Characters: [Mario](https://sketchfab.com) 🕹️
-
----
-
-## 📚 Resources
-
-### 3D Models and Assets
-- [Sketchfab](https://sketchfab.com)
-- [Free3D](https://free3d.com)
-- [TurboSquid](https://turbosquid.com)
-
-### Textures and Materials
-- [Textures.com](https://textures.com)
-- [CC0 Textures](https://cc0textures.com)
-- [3DTextures.me](https://3dtextures.me)
-
-### Sounds and Music
-- [Freesound](https://freesound.org)
-- [Mixkit](https://mixkit.co)
-- [ZapSplat](https://zapsplat.com)
+### **Animals**
+- **Animal Pack** 🦊: Various forest creatures.
+- **Fox Model** 🦊: [Free 3D Models](https://free3d.com)
 
 ---
 
-## 🗂️ Task Organization
+## 🛠️ Development & Technical Features
 
-### Team Members
-- **Camara Hamoudia**
-- **Skitou Chouaib** (GitHub Integrator)
-- **Vengadabady Lokeshwaran**
-- **Rhourri Yassine**
-
----
-
-## 🎉 Future Enhancements (Time Permitting)
-- **Timed Challenges:** Add time limits for more excitement ⏱️
-- **Scoring System:**
-  - Display in menu 📊
-  - Visible in-game leaderboard 🏆
-
----
-
-## 🔧 Development Environment
+### **Development Environment**
+- **Game Engine:** Unity 🎮
 - **Unity Version:** 2020.3.34
 - **Unity Plugin Version:** 3.10.0
 
-### Let's sculpt the future together! 🚀
+### **Task Distribution**
+- **Camara Hamoudia** 🛠️: Waste detection & manipulation, Level 1 mechanics.
+- **Skitou Chouaib** 🏗️: GitHub repository management, asset integration.
+- **Vengadabady Lokeshwaran** 🏗️: Bin capacity management, visual & sound feedback, floating menu.
+- **Rhourri Yassine** 🚀: Teleportation, score calculation, level progression.
+
+---
+
+## 🎉 Future Enhancements (If Time Allows)
+- **Timed Challenges** ⏱️: Add countdowns for a more competitive experience.
+- **Scoring System Enhancements** 📊: Display real-time scores and in-game leaderboards.
+- **Additional Environments** 🌎: Expand the virtual world with more recycling scenarios.
+
+---
+
+### **Join Us in Cleaning Up the Virtual World! 🌍♻️🚀**
+
