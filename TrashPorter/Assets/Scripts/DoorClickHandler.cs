@@ -1,3 +1,4 @@
+/*
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -73,6 +74,92 @@ public class DoorClickHandler : MonoBehaviour
         else
         {
             Debug.LogError("Next scene name is not set in the Inspector!");
+        }
+    }
+}
+*/
+
+// Script pour gérer l'interaction avec une porte permettant de passer au niveau suivant
+using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;  // Import pour les composants UI Text
+
+public class DoorClickHandler : MonoBehaviour
+{
+    // Nom de la scène suivante à charger
+    [SerializeField] private string nextSceneName;
+    // Délai avant l'apparition de la porte (en secondes)
+    [SerializeField] private float delayTime = 10f;
+    // Texte pour afficher le message de changement de niveau
+    [SerializeField] private Text levelMessageText;
+    // Composant audio pour jouer un son lors de l'apparition
+    [SerializeField] private AudioSource doorSound;
+
+    private Renderer doorRenderer; // Renderer de la porte (affichage)
+    private Light doorLight;       // Lumière attachée à la porte
+
+    // Initialisation des composants et masquage initial
+    void Start()
+    {
+        doorRenderer = GetComponent<Renderer>();
+        doorLight = GetComponentInChildren<Light>();
+        doorRenderer.enabled = false;
+        doorLight.enabled = false;
+        levelMessageText.enabled = false;
+        StartCoroutine(DelayDoorAppearance());
+    }
+
+    // Coroutine pour afficher la porte après un délai
+    private IEnumerator DelayDoorAppearance()
+    {
+        yield return new WaitForSeconds(delayTime);
+        doorRenderer.enabled = true;
+        doorLight.enabled = true;
+        levelMessageText.enabled = true;
+
+        if (doorSound != null)
+        {
+            doorSound.Play();
+        }
+        Debug.Log("La porte est maintenant visible !");
+    }
+
+    // Détection d'entrée dans la zone de collision (Trigger)
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("MainCamera")) // Vérifie si l'objet entrant est la caméra principale
+        {
+            Debug.Log("La caméra est passée par la porte. Changement de niveau...");
+            LoadNextScene();
+        }
+    }
+
+    // Vérifie si la porte a été cliquée et charge la scène suivante
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0)) // Clic gauche de souris
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit) && hit.transform == transform)
+            {
+                LoadNextScene();
+            }
+        }
+    }
+
+    // Charge la scène suivante
+    private void LoadNextScene()
+    {
+        if (!string.IsNullOrEmpty(nextSceneName))
+        {
+            SceneManager.LoadScene(nextSceneName);
+        }
+        else
+        {
+            Debug.LogError("Le nom de la scène suivante n'est pas défini dans l'inspecteur !");
         }
     }
 }

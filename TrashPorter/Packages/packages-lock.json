@@ -132,7 +132,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.picoxr": {
-      "version": "file:C:/Users/TEMP/Downloads/PicoXR_Platform_SDK-1.2.5_B81",
+      "version": "file:C:/Users/TEMP/Downloads/Pico",
       "depth": 0,
       "source": "local",
       "dependencies": {

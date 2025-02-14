@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 2333679388950100960}
   - component: {fileID: 6223898142882373116}
   - component: {fileID: 6887241606078573351}
-  - component: {fileID: 6235012514320416078}
   - component: {fileID: 6235012514320416079}
+  - component: {fileID: 7831403779359603059}
+  - component: {fileID: 6256851333726918480}
   m_Layer: 0
   m_Name: Paper_GameMesh
   m_TagString: PaperBin
@@ -83,19 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6235012514320416078
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6235012514320416077}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 131.74203, y: 134.223, z: 108.828026}
-  m_Center: {x: -0.000015258789, y: 67.2405, z: 2.1400018}
 --- !u!114 &6235012514320416079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +100,33 @@ MonoBehaviour:
   binRenderer: {fileID: 6887241606078573351}
   textAboveBin: {fileID: 8308164814372341605}
   maxCapacity: 5
+--- !u!64 &7831403779359603059
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6235012514320416077}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7047469564622175412, guid: 37b2ffc0aca4eed4098c6b6ff1b3a0ff, type: 3}
+--- !u!65 &6256851333726918480
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6235012514320416077}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 131.74203, y: 134.223, z: 108.828026}
+  m_Center: {x: -0.000015258789, y: 67.2405, z: 2.1400018}
 --- !u!1 &8308164814372341531
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,8 +234,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4290298644
-  m_fontColor: {r: 0.07843137, g: 0.7647059, b: 0.7231093, a: 1}
+    rgba: 4293365264
+  m_fontColor: {r: 0.063225314, g: 0.5568585, b: 0.9056604, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -237,8 +252,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4
-  m_fontSizeBase: 4
+  m_fontSize: 1.5
+  m_fontSizeBase: 1.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 1037456289675479483}
   - component: {fileID: 1037456289675479482}
   - component: {fileID: 1037456289675479481}
-  - component: {fileID: 1037456289675479480}
+  - component: {fileID: 8559482384011518411}
+  - component: {fileID: 615980493791993927}
   m_Layer: 0
   m_Name: Plastic_GameMesh
   m_TagString: PlasticBin
@@ -99,7 +100,21 @@ MonoBehaviour:
   binRenderer: {fileID: 1037456289675479482}
   textAboveBin: {fileID: 1037456290551039499}
   maxCapacity: 5
---- !u!65 &1037456289675479480
+--- !u!64 &8559482384011518411
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037456289675479460}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7047469564622175412, guid: 37b2ffc0aca4eed4098c6b6ff1b3a0ff, type: 3}
+--- !u!65 &615980493791993927
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -237,8 +252,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4
-  m_fontSizeBase: 4
+  m_fontSize: 1.5
+  m_fontSizeBase: 1.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
