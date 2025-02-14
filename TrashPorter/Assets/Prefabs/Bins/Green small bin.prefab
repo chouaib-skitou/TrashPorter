@@ -157,8 +157,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4
-  m_fontSizeBase: 4
+  m_fontSize: 1.5
+  m_fontSizeBase: 1.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -214,7 +214,8 @@ GameObject:
   - component: {fileID: 4259322878313607481}
   - component: {fileID: 3663669731790850018}
   - component: {fileID: 4306755353620173194}
-  - component: {fileID: 4306755353620173193}
+  - component: {fileID: 9170746692332560730}
+  - component: {fileID: 2359834275522830639}
   m_Layer: 0
   m_Name: Glass_GameMesh
   m_TagString: GlassBin
@@ -301,7 +302,21 @@ MonoBehaviour:
   binRenderer: {fileID: 3663669731790850018}
   textAboveBin: {fileID: 2165978621848946014}
   maxCapacity: 5
---- !u!65 &4306755353620173193
+--- !u!64 &9170746692332560730
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4306755353620173192}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7047469564622175412, guid: 37b2ffc0aca4eed4098c6b6ff1b3a0ff, type: 3}
+--- !u!65 &2359834275522830639
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

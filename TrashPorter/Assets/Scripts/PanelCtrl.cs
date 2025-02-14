@@ -1,5 +1,9 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.XR;
+using UnityEngine.UI;
+
 
 public class PanelCtrl : MonoBehaviour
 {
@@ -11,19 +15,56 @@ public class PanelCtrl : MonoBehaviour
     public AudioClip openSound; // Sound when opening
     public AudioClip closeSound; // Sound when closing
 
+    private InputDevice controller;
+
+    private bool isButtonPressed = false;  // To track the button press
+
     void Start()
     {
         // Ensure menu starts hidden
         menuCanvasGroup.alpha = 0;
         menuCanvasGroup.interactable = false;
         menuCanvasGroup.blocksRaycasts = false;
+
+        controller = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        UpdateController(); // Check if controller is connected
+
+        // Check if the menu button is pressed
+        if (controller.TryGetFeatureValue(CommonUsages.menuButton, out bool leftButtonPressed) && leftButtonPressed)
         {
-            ToggleMenu();
+            // Only trigger the action if it wasn't pressed before
+            if (!isButtonPressed)
+            {
+                isButtonPressed = true;
+                ToggleMenu();
+            }
+        }
+        else
+        {
+            isButtonPressed = false; // Reset the button press when it's not pressed
+        }
+    }
+
+    void UpdateController()
+    {
+        if (!controller.isValid) // Only detect if controller is not valid
+        {
+            var inputDevices = new List<InputDevice>();
+            InputDevices.GetDevicesWithCharacteristics(InputDeviceCharacteristics.Left | InputDeviceCharacteristics.Controller, inputDevices);
+
+            if (inputDevices.Count > 0)
+            {
+                controller = inputDevices[0];
+                // UnityEngine.Debug.LogError("Controller detected");
+            }
+            else
+            {
+                // UnityEngine.Debug.LogError("No controller detected!");
+            }
         }
     }
 

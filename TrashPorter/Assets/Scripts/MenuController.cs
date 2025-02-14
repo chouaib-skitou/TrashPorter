@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 
 public class MenuController : MonoBehaviour
 {
@@ -12,5 +12,24 @@ public class MenuController : MonoBehaviour
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
+    }
+}*/
+
+
+// Script de contrôle du menu principal avec fonction de quitter l'application
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.XR;
+
+using System.Collections.Generic;
+using System.Collections;
+
+public class MenuController : MonoBehaviour
+{
+    // Fonction pour quitter l'application
+    public void QuitGame()
+    {
+        Debug.Log("Quitter : Fermeture de l'application...");
+        Application.Quit();
     }
 }

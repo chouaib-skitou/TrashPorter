@@ -1,0 +1,9 @@
+ClearAllBins.CS Not tested yet ! 
+
+Remove DragObject and keyboard TrashZone scripts if not used ! 
+
+Add restart button on the menu !
+
+Change the names of the buttons on the menu ! 
+
+make a prefab for the door ! 
